@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:panelHeight="50dp" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PostCargo" >
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+    </LinearLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg" >
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="70dip"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="dis"
+            android:textColor="#ececec"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="70dip"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="money"
+            android:textColor="#ececec"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/distance"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/distance"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Miles"
+            android:textColor="#ececec"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/money"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/money"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Rs"
+            android:textColor="#ececec"
+            android:textSize="16dip" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:src="@drawable/arrow_up" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_margin="10dp"
+            android:background="@drawable/post_background_style" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/title_style"
+                android:gravity="clip_vertical"
+                android:text="         PICK UP ADDRESS"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#434344"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView3"
+                android:gravity="left"
+                android:padding="8dp"
+                android:text="Miles"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#434344"
+                android:textSize="12dip" />
+
+            <TextView
+                android:id="@+id/dropto"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView4"
+                android:gravity="left"
+                android:padding="8dp"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#434344"
+                android:textSize="12dip" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pickup"
+                android:background="@drawable/title_style"
+                android:gravity="center_vertical"
+                android:text="         DROP TO"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#434344"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/cabbutton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/buttonshape"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="Call Cab"
+                android:textColor="#E6E620"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/dropto"
+                android:ems="10"
+                android:hint="Your phone number"
+                android:inputType="phone"
+                android:textColor="#434344"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/size"
+                android:layout_width="100dip"
+                android:layout_height="50dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/phone"
+                android:onClick="getsize"
+                android:padding="8dp"
+                android:text="Commuters"
+                android:textColor="#434344"
+                android:textSize="12dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
